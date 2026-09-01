@@ -7,17 +7,17 @@
 
 ## Estado actual
 
-El repositorio contiene únicamente la base del proyecto Android correspondiente a la etapa 2. Las funcionalidades del taller se desarrollarán en ramas separadas para que ambos integrantes participen.
+La aplicación está implementada, compila correctamente y fue validada en un emulador Pixel 6 con Android 15. Incluye la consulta de usuarios, la lista, el detalle, la navegación, el tema oscuro y la apertura del marcador.
 
 ## Descripción
 
-El objetivo es desarrollar una aplicación Android en Kotlin y Jetpack Compose que consulte la API de DummyJSON y muestre un directorio con 120 usuarios. Desde la lista se podrá seleccionar una persona para consultar su información completa.
+Aplicación Android desarrollada en Kotlin y Jetpack Compose que consulta la API de DummyJSON y muestra un directorio con 120 usuarios. Desde la lista se puede seleccionar una persona para consultar su información completa.
 
 La información se obtiene desde:
 
 `https://dummyjson.com/user?limit=120`
 
-## Funcionalidades solicitadas
+## Funcionalidades implementadas
 
 - Consulta de los 120 usuarios en una sola petición.
 - Lista construida con `LazyColumn` y `ListItem`.
@@ -30,13 +30,13 @@ La información se obtiene desde:
 - Compatibilidad con tema claro y oscuro.
 - Componentes reutilizables para las imágenes y los campos de detalle.
 
-## Funcionamiento esperado
+## Funcionamiento
 
-Al iniciar la aplicación, Ktor deberá consultar la lista de usuarios. El resultado quedará almacenado en memoria para evitar llamadas adicionales durante la ejecución. Cuando se seleccione un usuario, el objeto correspondiente se enviará a la pantalla de detalle mediante Navigation 3.
+Al iniciar la aplicación, Ktor consulta la lista de usuarios. El repositorio conserva el resultado en memoria para impedir llamadas adicionales durante la ejecución. Cuando se selecciona un usuario, el objeto completo se envía a la pantalla de detalle mediante Navigation 3.
 
-Las imágenes se cargarán con Coil. El número telefónico utilizará `Intent.ACTION_DIAL`, por lo que la aplicación abrirá el marcador del dispositivo sin iniciar la llamada automáticamente.
+Las imágenes se cargan con Coil. El número telefónico utiliza `Intent.ACTION_DIAL`, por lo que la aplicación abre el marcador del dispositivo sin iniciar la llamada automáticamente.
 
-## Tecnologías previstas
+## Tecnologías
 
 - Kotlin
 - Jetpack Compose y Material 3
@@ -46,7 +46,7 @@ Las imágenes se cargarán con Coil. El número telefónico utilizará `Intent.A
 - Kotlin Serialization
 - ViewModel y StateFlow
 
-## Organización prevista del proyecto
+## Organización del proyecto
 
 ```text
 data/model        Modelos de la respuesta de DummyJSON
@@ -59,7 +59,7 @@ ui/theme          Colores y temas de la aplicación
 ui/viewmodel      Estado y lógica de la interfaz
 ```
 
-La distribución propuesta de las etapas y responsabilidades está en [PLAN_TRABAJO.md](PLAN_TRABAJO.md). Puede ajustarse entre los integrantes antes de comenzar cada etapa.
+La distribución de las etapas está registrada en [PLAN_TRABAJO.md](PLAN_TRABAJO.md).
 
 ## Ejecución
 
@@ -81,6 +81,26 @@ app/build/outputs/apk/debug/app-debug.apk
 ```
 
 La aplicación requiere Android 6.0, API 23, o una versión posterior y necesita acceso a Internet.
+
+## Pruebas
+
+Las pruebas unitarias verifican:
+
+- El parseo de la respuesta JSON aunque la API envíe campos adicionales.
+- Que varias solicitudes concurrentes produzcan una sola consulta.
+- Que un resultado fallido también quede almacenado y no repita la petición.
+
+Para ejecutar pruebas, análisis estático y compilación:
+
+```powershell
+.\gradlew.bat testDebugUnitTest lintDebug assembleDebug
+```
+
+## Sustentación
+
+- [Guía de sustentación](GUIA_SUSTENTACION.md)
+- [Guion del video](GUION_VIDEO.md)
+- [Lista de comprobación de la entrega](CHECKLIST_ENTREGA.md)
 
 ## Entrega del taller
 
