@@ -5,15 +5,19 @@
 - Sebastián Peralta Neme (`SebastianNeme`)
 - Samuel Enrique Giraldo Sabogal (`Segiraldo0610`)
 
+## Estado actual
+
+El repositorio contiene únicamente la base del proyecto Android correspondiente a la etapa 2. Las funcionalidades del taller se desarrollarán en ramas separadas para que ambos integrantes participen.
+
 ## Descripción
 
-Aplicación Android desarrollada en Kotlin y Jetpack Compose. La aplicación consulta la API de DummyJSON y muestra un directorio con 120 usuarios. Desde la lista se puede seleccionar una persona para consultar su información completa.
+El objetivo es desarrollar una aplicación Android en Kotlin y Jetpack Compose que consulte la API de DummyJSON y muestre un directorio con 120 usuarios. Desde la lista se podrá seleccionar una persona para consultar su información completa.
 
 La información se obtiene desde:
 
 `https://dummyjson.com/user?limit=120`
 
-## Funcionalidades
+## Funcionalidades solicitadas
 
 - Consulta de los 120 usuarios en una sola petición.
 - Lista construida con `LazyColumn` y `ListItem`.
@@ -26,13 +30,13 @@ La información se obtiene desde:
 - Compatibilidad con tema claro y oscuro.
 - Componentes reutilizables para las imágenes y los campos de detalle.
 
-## Funcionamiento
+## Funcionamiento esperado
 
-Al iniciar la aplicación, Ktor consulta la lista de usuarios. El resultado queda almacenado en memoria para evitar llamadas adicionales durante la ejecución. Cuando se selecciona un usuario, el objeto correspondiente se envía a la pantalla de detalle mediante Navigation 3.
+Al iniciar la aplicación, Ktor deberá consultar la lista de usuarios. El resultado quedará almacenado en memoria para evitar llamadas adicionales durante la ejecución. Cuando se seleccione un usuario, el objeto correspondiente se enviará a la pantalla de detalle mediante Navigation 3.
 
-Las imágenes se cargan con Coil. El número telefónico utiliza `Intent.ACTION_DIAL`, por lo que la aplicación abre el marcador del dispositivo sin iniciar la llamada automáticamente.
+Las imágenes se cargarán con Coil. El número telefónico utilizará `Intent.ACTION_DIAL`, por lo que la aplicación abrirá el marcador del dispositivo sin iniciar la llamada automáticamente.
 
-## Tecnologías
+## Tecnologías previstas
 
 - Kotlin
 - Jetpack Compose y Material 3
@@ -42,7 +46,7 @@ Las imágenes se cargan con Coil. El número telefónico utiliza `Intent.ACTION_
 - Kotlin Serialization
 - ViewModel y StateFlow
 
-## Organización del proyecto
+## Organización prevista del proyecto
 
 ```text
 data/model        Modelos de la respuesta de DummyJSON
@@ -54,6 +58,8 @@ ui/screens        Pantallas de lista y detalle
 ui/theme          Colores y temas de la aplicación
 ui/viewmodel      Estado y lógica de la interfaz
 ```
+
+La distribución propuesta de las etapas y responsabilidades está en [PLAN_TRABAJO.md](PLAN_TRABAJO.md). Puede ajustarse entre los integrantes antes de comenzar cada etapa.
 
 ## Ejecución
 
