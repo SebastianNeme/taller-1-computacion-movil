@@ -78,10 +78,10 @@ La aplicación requiere Android 6.0, API 23, o una versión posterior y necesita
 
 ## Entrega del taller
 
-La entrega debe incluir:
+La entrega debe incluye:
 
-- Código fuente del proyecto en un archivo ZIP o RAR.
+- Código fuente del proyecto en un archivo ZIP.
 - APK de depuración.
-- Enlace público o no listado de YouTube con un video de máximo cuatro minutos.
+- Enlace de YouTube con un video explicativo de cuatro minutos.
 
-En el video se deben mostrar las funcionalidades de la aplicación y explicar brevemente la organización de paquetes, los componentes, las pantallas, la navegación y el consumo de la API con Ktor.
+En el video muestran las funcionalidades de la aplicación y se explica brevemente la organización de paquetes, los componentes, las pantallas, la navegación y el consumo de la API con Ktor.
