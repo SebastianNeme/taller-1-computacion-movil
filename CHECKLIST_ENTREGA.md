@@ -28,19 +28,19 @@
 
 ## Archivos para entregar
 
-- [ ] Código fuente limpio en ZIP o RAR.
-- [ ] APK de depuración actualizado.
-- [ ] Video de máximo cuatro minutos.
+- [x] Código fuente limpio en ZIP o RAR.
+- [x] APK de depuración actualizado.
+- [x] Video de máximo cuatro minutos (3 minutos y 28 segundos).
 - [ ] Video publicado en YouTube como público o no listado.
 - [ ] Enlace de YouTube agregado en el espacio de entrega.
 
 ## Video
 
-- [ ] Presentar a los integrantes y el objetivo.
-- [ ] Mostrar lista, encabezado fijo y desplazamiento.
-- [ ] Mostrar detalle y marcador.
-- [ ] Mostrar tema claro y oscuro.
-- [ ] Explicar paquetes, componentes y pantallas.
-- [ ] Explicar Ktor, repositorio y consulta única.
-- [ ] Explicar Navigation 3 y paso del usuario.
-- [ ] Confirmar duración inferior a cuatro minutos.
+- [x] Presentar a los integrantes y el objetivo.
+- [x] Mostrar lista, encabezado fijo y desplazamiento.
+- [x] Mostrar detalle y marcador.
+- [x] Mostrar tema claro y oscuro.
+- [x] Explicar paquetes, componentes y pantallas.
+- [x] Explicar Ktor, repositorio y consulta única.
+- [x] Explicar Navigation 3 y paso del usuario.
+- [x] Confirmar duración inferior a cuatro minutos.

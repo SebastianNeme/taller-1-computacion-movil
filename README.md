@@ -112,3 +112,5 @@ La entrega debe incluir:
 - Enlace público o no listado de YouTube con un video de máximo cuatro minutos.
 
 En el video se deben mostrar las funcionalidades de la aplicación y explicar brevemente la organización de paquetes, los componentes, las pantallas, la navegación y el consumo de la API con Ktor.
+
+El video final fue generado y revisado en resolución 1920 × 1080, con audio y una duración de 3 minutos y 28 segundos. Su publicación en YouTube y el registro del enlace en el espacio de entrega quedan como pasos manuales de entrega.
