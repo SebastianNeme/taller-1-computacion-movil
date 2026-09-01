@@ -101,6 +101,7 @@ Para ejecutar pruebas, análisis estático y compilación:
 - [Guía de sustentación](GUIA_SUSTENTACION.md)
 - [Guion del video](GUION_VIDEO.md)
 - [Lista de comprobación de la entrega](CHECKLIST_ENTREGA.md)
+- [Resultados de verificación](VERIFICACION.md)
 
 ## Entrega del taller
 
