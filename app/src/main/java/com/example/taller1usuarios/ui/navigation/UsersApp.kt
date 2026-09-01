@@ -1,6 +1,9 @@
 package com.example.taller1usuarios.ui.navigation
 
+import android.content.ActivityNotFoundException
+import android.content.Context
 import android.content.Intent
+import android.widget.Toast
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.platform.LocalContext
 import androidx.core.net.toUri
@@ -42,12 +45,22 @@ fun UsersApp(usersViewModel: UsersViewModel = viewModel()) {
                 UserDetailScreen(
                     user = route.user,
                     onBack = { backStack.removeLastOrNull() },
-                    onPhoneClick = { phone ->
-                        val intent = Intent(Intent.ACTION_DIAL, "tel:${phone}".toUri())
-                        context.startActivity(intent)
-                    },
+                    onPhoneClick = { phone -> openDialer(context, phone) },
                 )
             }
         },
     )
+}
+
+private fun openDialer(context: Context, phone: String) {
+    val intent = Intent(Intent.ACTION_DIAL, "tel:${phone}".toUri())
+    try {
+        context.startActivity(intent)
+    } catch (_: ActivityNotFoundException) {
+        Toast.makeText(
+            context,
+            "No hay una aplicación de teléfono disponible.",
+            Toast.LENGTH_LONG,
+        ).show()
+    }
 }

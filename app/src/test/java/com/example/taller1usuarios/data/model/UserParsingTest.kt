@@ -5,6 +5,8 @@ import org.junit.Assert.assertEquals
 import org.junit.Test
 
 class UserParsingTest {
+    private val jsonFormat = Json { ignoreUnknownKeys = true }
+
     @Test
     fun responseIsParsedWhileUnknownFieldsAreIgnored() {
         val json = """
@@ -30,8 +32,7 @@ class UserParsingTest {
             }
         """.trimIndent()
 
-        val response = Json { ignoreUnknownKeys = true }
-            .decodeFromString<UsersResponse>(json)
+        val response = jsonFormat.decodeFromString<UsersResponse>(json)
 
         assertEquals("Emily Johnson", response.users.single().fullName)
         assertEquals("Example Inc", response.users.single().company.name)
